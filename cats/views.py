@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from .models import Cat
-from .serializers import CatSerializer
+from .models import Cat, Owner
+from .serializers import CatSerializer, OwnerSerializer
 
 
 class CatViewSet(viewsets.ModelViewSet):
@@ -12,3 +12,8 @@ class CatViewSet(viewsets.ModelViewSet):
 class CatReadOnlySet(viewsets.ReadOnlyModelViewSet):
     queryset = Cat.objects.all()
     serializer_class = CatSerializer
+
+
+class OwnerViewSet(viewsets.ModelViewSet):
+    queryset = Owner.objects.all()
+    serializer_class = OwnerSerializer
