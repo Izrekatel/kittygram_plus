@@ -6,7 +6,7 @@ from cats.views import CatViewSet, CatReadOnlySet
 
 
 router = DefaultRouter()
-router.register('cats', CatViewSet, basename='cat')
+router.register('cats', CatViewSet, basename='cat-FULL')
 router.register('cats-read', CatReadOnlySet, basename='cat-READ')
 
 urlpatterns = [
